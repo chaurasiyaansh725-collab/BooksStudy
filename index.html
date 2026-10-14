@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07152f">
+<meta name="description" content="BooksStudy — Maharashtra SSC Class 9 study companion">
+<link rel="manifest" href="/manifest.json">
+<title>BooksStudy.com — Your AI Study Buddy</title>
+<style>
+:root{--bg:#07152f;--panel:#102448;--panel2:#142d55;--cyan:#37d7ed;--text:#f2f7ff;--muted:#a9bddb;--line:#24416d;--green:#6be4b1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 100% 0,#12345a 0,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+header{position:sticky;top:0;z-index:5;background:#07152fee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 16px;display:flex;align-items:center;gap:12px}
+.logo{height:42px;width:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),#5479ff);display:grid;place-items:center;color:#07152f;font-weight:900;font-size:21px}
+.brand{font-size:19px;font-weight:850;letter-spacing:-.5px}.sub{font-size:11px;color:var(--muted)}.spacer{flex:1}.pill{font-size:11px;border:1px solid #286c80;border-radius:30px;padding:6px 9px;color:var(--cyan)}
+main{max-width:760px;margin:auto;padding:18px 15px 105px}.hero{padding:23px 19px;border:1px solid #23507a;border-radius:24px;background:linear-gradient(140deg,#143760,#0d2142 70%);position:relative;overflow:hidden}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}.hero h1{font-size:29px;line-height:1.13;margin:10px 0}.hero p{color:var(--muted);font-size:14px;line-height:1.5;margin:0 0 17px}.hero .spark{position:absolute;right:13px;top:14px;font-size:44px;opacity:.3}
+button,input,textarea,select{font:inherit}.primary{border:0;border-radius:13px;padding:12px 16px;background:var(--cyan);color:#04152a;font-weight:800;cursor:pointer}.secondary{border:1px solid #37618f;border-radius:12px;padding:10px 13px;background:#122b50;color:var(--text);cursor:pointer}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:23px 2px 12px;font-size:17px;font-weight:800}.hint{font-size:12px;color:var(--muted);font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.subject{border:1px solid var(--line);background:linear-gradient(155deg,#122a4f,#0c1d3a);padding:16px;border-radius:18px;text-align:left;color:var(--text);cursor:pointer;min-height:115px;transition:transform .15s,border-color .15s}.subject:active{transform:scale(.98)}.emoji{font-size:26px}.subject b{display:block;margin-top:9px}.subject small{color:var(--muted)}
+.chatbox{margin-top:18px;border:1px solid var(--line);background:#0c1e3b;border-radius:22px;overflow:hidden}.chathead{padding:14px 15px;background:#10294d;display:flex;align-items:center;gap:10px}.bot{width:35px;height:35px;border-radius:12px;background:#163f61;display:grid;place-items:center}.chathead small{display:block;color:var(--muted);margin-top:2px}.chatbody{padding:14px;min-height:145px;max-height:40vh;overflow:auto}.bubble{padding:13px 14px;border-radius:15px;line-height:1.55;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.botbubble{background:#142b4c;border:1px solid #24446e;margin-right:8px}.userbubble{background:#164d66;border:1px solid #22718a;margin:10px 0 10px 24px}.composer{padding:12px;border-top:1px solid var(--line)}textarea{width:100%;resize:vertical;min-height:74px;border-radius:13px;border:1px solid #2b4c76;background:#071831;color:var(--text);padding:12px;outline:none}textarea:focus{border-color:var(--cyan)}.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px;align-items:center}.send{margin-left:auto}.file-label{display:inline-flex;align-items:center;gap:6px;border:1px solid #37618f;background:#122b50;padding:9px 12px;border-radius:12px;font-size:13px;cursor:pointer}input[type=file]{display:none}.status{font-size:12px;color:var(--muted);margin-top:8px}.loading{color:var(--cyan)}.bottomnav{position:fixed;bottom:0;left:0;right:0;z-index:6;background:#07152ff5;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 8px calc(10px + env(safe-area-inset-bottom));backdrop-filter:blur(12px)}.navitem{border:0;background:transparent;color:var(--muted);font-size:11px;display:grid;gap:3px;place-items:center;min-width:58px}.navitem span{font-size:19px}.navitem.active{color:var(--cyan)}.note{font-size:12px;line-height:1.5;color:var(--muted);padding:12px 3px}.preview{max-width:100%;max-height:180px;border-radius:12px;margin-top:8px;border:1px solid var(--line)}@media(min-width:600px){.hero h1{font-size:36px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="logo">B</div><div><div class="brand">BooksStudy<span style="color:var(--cyan)">.com</span></div><div class="sub">YOUR PERSONAL AI STUDY BUDDY</div></div><div class="spacer"></div><div class="pill" id="topClassBadge">SELECT CLASS</div></header>
+<main>
+<section id="classPicker" class="hero">
+<div class="spark">✦</div><div class="eyebrow">WELCOME TO BOOKSSTUDY</div><h1>Choose your<br><span style="color:var(--cyan)">Class</span></h1>
+<p>Maharashtra State Board • English Medium<br>Choose a class to explore all subjects and ask the AI Tutor.</p>
+<div class="grid" style="margin-top:18px">
+<button class="subject" style="min-height:150px;border-color:#2c91a5" onclick="selectClass('9')"><span class="emoji">📘</span><b style="font-size:23px">9th Class</b><small>Class 9 • All Subjects</small><span style="display:inline-block;margin-top:12px;color:var(--cyan);font-weight:800">Choose Class →</span></button>
+<button class="subject" style="min-height:150px;border-color:#2c91a5" onclick="selectClass('10')"><span class="emoji">🎓</span><b style="font-size:23px">10th Class</b><small>Class 10 • All Subjects</small><span style="display:inline-block;margin-top:12px;color:var(--cyan);font-weight:800">Choose Class →</span></button>
+</div>
+</section>
+
+<section id="classHome" hidden>
+<button class="secondary" onclick="showClassPicker()" style="margin-bottom:14px">← Change Class</button>
+<section class="hero">
+<div class="spark">✦</div><div class="eyebrow" id="welcomeEyebrow">MAHARASHTRA SSC BOARD</div><h1 id="classTitle">Class 9<br><span style="color:var(--cyan)">Let's learn.</span></h1>
+<p id="classDescription">All subjects in one place. Tap a subject, type a question, or send a photo to get step-by-step help.</p>
+<button class="primary" onclick="document.querySelector('#question').focus();document.querySelector('#tutor').scrollIntoView({behavior:'smooth'})">Ask your question ↗</button>
+</section>
+<div class="section-title">All subjects <span class="hint">Tap to ask</span></div>
+<div class="grid" id="subjectGrid">
+<button class="subject" onclick="chooseSubject('Mathematics')"><span class="emoji">📐</span><b>Mathematics</b><small>Maths & problem solving</small></button>
+<button class="subject" onclick="chooseSubject('Science')"><span class="emoji">🧪</span><b>Science</b><small>Physics, chemistry, biology</small></button>
+<button class="subject" onclick="chooseSubject('English')"><span class="emoji">📘</span><b>English</b><small>Grammar & literature</small></button>
+<button class="subject" onclick="chooseSubject('Marathi')"><span class="emoji">📝</span><b>Marathi</b><small>Language & literature</small></button>
+<button class="subject" onclick="chooseSubject('Hindi')"><span class="emoji">🔤</span><b>Hindi</b><small>Language & grammar</small></button>
+<button class="subject" onclick="chooseSubject('History and Political Science')"><span class="emoji">🏛️</span><b>History & Political Science</b><small>History and civics</small></button>
+<button class="subject" onclick="chooseSubject('Geography')"><span class="emoji">🌍</span><b>Geography</b><small>Maps and places</small></button>
+<button class="subject" onclick="chooseSubject('Economics')"><span class="emoji">📊</span><b>Economics</b><small>Basic concepts</small></button>
+<button class="subject" onclick="chooseSubject('ICT')"><span class="emoji">💻</span><b>ICT</b><small>Information technology</small></button>
+<button class="subject" onclick="chooseSubject('Other subject')"><span class="emoji">➕</span><b>Other subject</b><small>Ask any class question</small></button>
+</div>
+<div class="section-title">AI Tutor <span class="hint">In-app answers</span></div>
+<section class="chatbox" id="tutor">
+<div class="chathead"><div class="bot">🤖</div><div><b>BooksStudy AI Tutor</b><small id="subjectLabel">Choose a class to begin</small></div><div class="spacer"></div><span style="color:var(--green);font-size:12px">● Ready</span></div>
+<div class="chatbody" id="chatbody"><div class="bubble botbubble">Hi! 👋 I'm your BooksStudy tutor.\n\nChoose Class 9 or Class 10 first. Then type a question, tap a subject, or upload a photo of your textbook question. I'll explain it step by step.</div></div>
+<div class="composer">
+<textarea id="question" placeholder="Choose a class first, then type your question..." rows="3"></textarea>
+<div id="photoPreview"></div>
+<div class="tools">
+<label class="file-label">📷 Add photo<input id="photo" type="file" accept="image/*" capture="environment"></label>
+<button class="secondary" onclick="clearQuestion()">Clear</button>
+<button class="primary send" id="sendBtn" onclick="askAI()">Solve step by step ↗</button>
+</div><div class="status" id="status">Choose a class, then type a question or attach a photo. Internet is required for AI answers.</div>
+</div></section>
+</section>
+<div class="note">Note: This starter app needs a secure server with an OpenAI API key before live AI answers will work. Never put a secret API key directly in this page. AI answers should be checked against your textbook.</div>
+</main>
+<nav class="bottomnav"><button class="navitem active" onclick="scrollTo({top:0,behavior:'smooth'})"><span>⌂</span>Home</button><button class="navitem" onclick="document.querySelector('.grid').scrollIntoView({behavior:'smooth'})"><span>▦</span>Subjects</button><button class="navitem" onclick="document.querySelector('#question').focus();document.querySelector('#tutor').scrollIntoView({behavior:'smooth'})"><span>✦</span>AI Tutor</button><button class="navitem" onclick="alert('Progress tracking can be added in the next version.')"><span>◷</span>Progress</button></nav>
+<script>
+let selectedSubject = "General";
+let selectedClass = "";
+let imageDataUrl = "";
+function selectClass(grade) {
+  selectedClass = grade;
+  selectedSubject = "General";
+  document.getElementById("classPicker").hidden = true;
+  document.getElementById("classHome").hidden = false;
+  document.getElementById("topClassBadge").textContent = grade + "TH CLASS • SSC";
+  document.getElementById("classTitle").innerHTML = "Class " + grade + "<br><span style="color:var(--cyan)">Let's learn.</span>";
+  document.getElementById("classDescription").textContent = "Maharashtra SSC Board • English Medium. Explore all subjects, tap a question, type it, or send a photo for step-by-step help.";
+  document.getElementById("subjectLabel").textContent = "Class " + grade + " • Choose a subject";
+  document.getElementById("question").placeholder = "Type your Class " + grade + " question here...";
+  document.getElementById("status").textContent = "Class " + grade + " selected. Type a question or attach a photo.";
+  document.querySelectorAll(".navitem").forEach(el => el.classList.remove("active"));
+  document.querySelector(".navitem").classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function showClassPicker() {
+  document.getElementById("classHome").hidden = true;
+  document.getElementById("classPicker").hidden = false;
+  document.getElementById("topClassBadge").textContent = "SELECT CLASS";
+  selectedClass = "";
+  selectedSubject = "General";
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function chooseSubject(subject) {
+  selectedSubject = subject;
+  document.getElementById("subjectLabel").textContent = subject + " • Class " + (selectedClass || "9");
+  document.getElementById("question").placeholder = "Ask a Class " + (selectedClass || "9") + " " + subject + " question...";
+  document.getElementById("tutor").scrollIntoView({behavior:"smooth",block:"start"});
+  document.getElementById("question").focus();
+}
+function addBubble(text, who="bot") {
+  const node = document.createElement("div");
+  node.className = "bubble " + (who === "user" ? "userbubble" : "botbubble");
+  node.textContent = text;
+  document.getElementById("chatbody").appendChild(node);
+  document.getElementById("chatbody").scrollTop = document.getElementById("chatbody").scrollHeight;
+}
+function clearQuestion() {
+  document.getElementById("question").value = "";
+  document.getElementById("photo").value = "";
+  document.getElementById("photoPreview").innerHTML = "";
+  imageDataUrl = "";
+  document.getElementById("status").textContent = "You can type a question or attach a photo.";
+}
+document.getElementById("photo").addEventListener("change", async e => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  if (!file.type.startsWith("image/")) { alert("Please choose an image."); return; }
+  if (file.size > 8 * 1024 * 1024) { alert("Please choose a photo under 8 MB."); e.target.value=""; return; }
+  imageDataUrl = await new Promise((resolve,reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+  document.getElementById("photoPreview").innerHTML = "";
+  const img = document.createElement("img");
+  img.src = imageDataUrl; img.alt = "Selected question photo"; img.className = "preview";
+  document.getElementById("photoPreview").appendChild(img);
+  document.getElementById("status").textContent = "Photo ready. Add any extra details, then tap Solve.";
+});
+async function askAI() {
+  const question = document.getElementById("question").value.trim();
+  if (!selectedClass) { document.getElementById("status").textContent = "Please choose Class 9 or Class 10 first."; document.getElementById("classPicker").scrollIntoView({behavior:"smooth"}); return; }
+  if (!question && !imageDataUrl) { document.getElementById("status").textContent = "Please type a question or add a photo first."; return; }
+  addBubble((question || "Please solve the question in this photo.") + (imageDataUrl ? "\n📷 Photo attached" : ""), "user");
+  document.getElementById("question").value = "";
+  const btn = document.getElementById("sendBtn");
+  btn.disabled = true; btn.textContent = "Solving…";
+  document.getElementById("status").innerHTML = '<span class="loading">AI is working…</span>';
+  try {
+    const resp = await fetch("/api/solve", {
+      method: "POST", headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({question, imageDataUrl, subject:selectedSubject, grade:selectedClass})
+    });
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || "AI request failed");
+    addBubble(data.answer || "No answer received.");
+    document.getElementById("status").textContent = "Answer received. Ask a follow-up anytime.";
+    document.getElementById("photoPreview").innerHTML = "";
+    document.getElementById("photo").value = "";
+    imageDataUrl = "";
+  } catch (err) {
+    addBubble("AI isn't connected yet or the server is unavailable.\n\n" + (err.message || "Please try again later.") + "\n\nThe app owner must deploy the server and set OPENAI_API_KEY securely.");
+    document.getElementById("status").textContent = "AI setup required before live answers can work.";
+  } finally {
+    btn.disabled = false; btn.textContent = "Solve step by step ↗";
+  }
+}
+if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+</script>
+</body>
+</html>
